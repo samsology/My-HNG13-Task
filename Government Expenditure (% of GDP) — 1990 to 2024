@@ -1,0 +1,36 @@
+ver the past few days as I joined the HNG Tech 13, I completed a first full data analytics workflow using only Microsoft Excel and Power Query — from finding and cleaning real-world data to deriving insights and visualizing trends.
+
+
+📊 Dataset: World Bank – Government Total Expenditure (% of GDP)
+🕒 Years: 1990–2024
+🌎 Scope: 196 countries (cleaned to 101 usable records)
+
+
+🔍 What I Did
+• Used Power Query to detect and remove missing values (>40%) and created new columns for region, development level, and economic volatility.
+• Analyzed trends using Pivot Tables, Line Charts, Bar Charts, and Scatter Plots.
+• Explored fiscal patterns by region and development class to see who spends more — and why.
+
+
+📈 What the Charts Show
+• Developed countries consistently spend a higher share of GDP on government (welfare, healthcare, and public services).
+• Europe and Asia lead in average government expenditure, followed by the Americas, Africa, and Oceania.
+• Most countries cluster within a narrow band, but a few show extreme spikes — likely small or resource-rich economies.
+• Stable economies show higher and steadier spending patterns than volatile ones.
+
+
+💡 Key Insights
+1. Developed economies allocate a larger share of GDP to public spending — reflecting stronger fiscal capacity.
+2. Europe and Asia dominate in average expenditure; Africa trails but shows gradual improvement.
+3. Aggregating data by sums can distort patterns — averages and medians better capture typical behavior.
+4. A few outlier countries/years skew totals and should be investigated individually.
+
+
+🧭 Why It Matters
+How much a government spends (relative to GDP) shapes its ability to fund health, education, and social protection.
+Understanding these global fiscal footprints helps policymakers and analysts compare economic models — from welfare-heavy to lean-state systems.
+
+
+⚙️ Tools & Skills
+Excel | Power Query | Pivot Table | Data Cleaning | Visualization | Trend Analysis | Storytelling
+This project reminded me that even Excel alone can reveal powerful global patterns when data is structured, cleaned, and visualized effectively.
