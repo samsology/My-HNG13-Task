@@ -1,0 +1,48 @@
+ MovieLens Data Analysis (HNG13 Stage 2)
+
+## 🧠 Introduction
+This project was completed as part of the **HNG13 Data Analytics Internship (Stage 2)**.  
+The goal was to demonstrate end-to-end data analytics skills using **Python**, transitioning from spreadsheet analysis (Excel) in Stage 1 to code-driven analytics using **Google Colab** and **pandas**.
+
+---
+
+## 📂 Dataset Overview
+This dataset is a subset of the **MovieLens dataset**, containing details about movies, user ratings, and tags.  
+The task required merging and analyzing multiple files connected by a common key — `movieId`.
+
+| File | Description | Key Columns |
+|------|--------------|--------------|
+| `ratings.csv` | User movie ratings | userId, movieId, rating, timestamp |
+| `movies.csv` | Movie details | movieId, title, genres |
+| `tags.csv` | User-generated movie tags | userId, movieId, tag, timestamp |
+| `links.csv` | External identifiers | movieId, imdbId, tmdbId |
+
+---
+
+## ☁️ Work Environment
+- **Tool:** Google Colab  
+- **Language:** Python  
+- **Libraries:** pandas, matplotlib, seaborn  
+- **Data Source:** Local CSV files (MovieLens subset)  
+- **Output Table:** `Final_merged` → 233,214 rows × 11 columns  
+
+---
+
+## 🧹 Data Cleaning & Merging
+The datasets were cleaned and merged using **inner joins** on the `movieId` column.  
+Duplicates and irrelevant fields were removed for a cleaner final dataset.
+
+### 🧩 Code Snippet
+```python
+import pandas as pd
+
+ratings = pd.read_csv('ratings.csv')
+movies = pd.read_csv('movies.csv')
+tags = pd.read_csv('tags.csv')
+links = pd.read_csv('links.csv')
+
+merged1 = pd.merge(ratings, movies, on='movieId', how='inner')
+merged2 = pd.merge(merged1, tags, on='movieId', how='inner')
+Final_merged = pd.merge(merged2, links, on='movieId', how='inner')
+
+print(Final_merged.shape)  # (233214, 11)
